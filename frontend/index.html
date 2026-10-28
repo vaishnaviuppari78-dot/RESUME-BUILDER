@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Build - Professional Creator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="no-print">
+        <div class="navbar">
+            <h1 class="logo">📄 Resume Build</h1>
+            <div id="auth-status-container">
+                <input type="email" id="user-session-email" placeholder="Enter your email to start" required />
+                <button id="session-btn" class="btn-primary">Access Workspace</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container no-print" id="main-workspace" style="display: none;">
+        <section class="form-sectionCard">
+            <h2>Build Data Profile</h2>
+            <form id="resume-builder-form">
+                <div class="form-group">
+                    <label for="form-fullname">Full Name *</label>
+                    <input type="text" id="form-fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="form-title">Target Job Title</label>
+                    <input type="text" id="form-title" placeholder="Software Engineer, Data Analyst">
+                </div>
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="form-phone">Phone Number</label>
+                        <input type="tel" id="form-phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-website">Portfolio Website / LinkedIn</label>
+                        <input type="url" id="form-website">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form-summary">Professional Summary</label>
+                    <textarea id="form-summary" rows="3" placeholder="Briefly describe your career objectives and skills..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="form-skills">Skills (Comma Separated)</label>
+                    <input type="text" id="form-skills" placeholder="JavaScript, Python, SQL, HTML5">
+                </div>
+                <div class="form-group">
+                    <label for="form-education">Education Details</label>
+                    <textarea id="form-education" rows="3" placeholder="B.Tech in CSE - XYZ College (2023 - 2027)"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="form-experience">Work / Project Experience</label>
+                    <textarea id="form-experience" rows="3" placeholder="Web Application Project - Developed a custom system utilizing Express endpoints..."></textarea>
+                </div>
+                <button type="submit" class="btn-success">Save Profile Data</button>
+            </form>
+        </section>
+
+        <section class="preview-sectionCard">
+            <div class="preview-header-row">
+                <h2>Live Canvas Preview</h2>
+                <button onclick="window.print()" class="btn-secondary">Download Document as PDF</button>
+            </div>
+            
+            <!-- Real Time Visual Generation Interface Frame -->
+            <div id="resume-document-canvas" class="resume-paper">
+                <div class="canvas-header">
+                    <h1 id="view-name">Your Full Name</h1>
+                    <h3 id="view-title" class="accent-text">Professional Title Target</h3>
+                    <div class="canvas-contact">
+                        <span id="view-email">email@domain.com</span> | 
+                        <span id="view-phone">Phone Number</span> | 
+                        <span id="view-web">Website Links</span>
+                    </div>
+                </div>
+                <hr />
+                <div class="canvas-body">
+                    <div class="canvas-block">
+                        <h4>Professional Profile Summary</h4>
+                        <p id="view-summary">Your executive profile details will appear here as you construct data forms dynamically.</p>
+                    </div>
+                    <div class="canvas-block">
+                        <h4>Core Technical Skills</h4>
+                        <p id="view-skills">Core listed items</p>
+                    </div>
+                    <div class="canvas-block">
+                        <h4>Academic Background</h4>
+                        <div id="view-education" class="pre-wrap">Details regarding formal educational systems.</div>
+                    </div>
+                    <div class="canvas-block">
+                        <h4>Professional & Project Experience</h4>
+                        <div id="view-experience" class="pre-wrap">Details regarding functional engineering workflows.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Welcome Display Prompt -->
+    <div id="welcome-card-display" class="welcome-card container no-print">
+        <h3>Welcome to the Dynamic Resume Builder Application Workspace</h3>
+        <p>Please enter your email above to open your cloud database configuration panel.</p>
+    </div>
+
+    <footer class="no-print">
+        <p>&copy; 2026 Resume Build Platform Layer - B.Tech Academic Project Initiative</p>
+    </footer>
+</body>
+</html>

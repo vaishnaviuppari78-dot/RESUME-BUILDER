@@ -1,0 +1,172 @@
+:root {
+    --primary: #2563eb;
+    --success: #16a34a;
+    --background: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#auth-status-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input, textarea {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+#user-session-email {
+    width: 260px;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary { background-color: var(--primary); color: white; }
+.btn-success { background-color: var(--success); color: white; width: 100%; }
+.btn-secondary { background-color: var(--text-muted); color: white; }
+
+button:hover { opacity: 0.9; }
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.welcome-card {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-top: 5rem;
+}
+
+#main-workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-sectionCard, .preview-sectionCard {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.preview-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Resume Document Presentation Formatting Layout Frame */
+.resume-paper {
+    background: white;
+    border: 1px solid #94a3b8;
+    padding: 2.5rem;
+    min-height: 297mm; /* Standard A4 Metric Scale Ratio */
+    color: #000;
+}
+
+.canvas-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.accent-text { color: #1e3a8a; margin-top: 0.2rem; font-size: 1.2rem;}
+.canvas-contact { margin-top: 0.5rem; font-size: 0.85rem; color: #475569; }
+hr { margin: 1rem 0; border: 0; border-top: 2px solid #1e3a8a; }
+
+.canvas-block { margin-bottom: 1.5rem; }
+.canvas-block h4 { 
+    text-transform: uppercase; 
+    color: #1e3a8a; 
+    border-bottom: 1px solid #cbd5e1; 
+    padding-bottom: 0.2rem; 
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+.pre-wrap { white-space: pre-wrap; font-size: 0.9rem; line-height: 1.4; }
+p { font-size: 0.9rem; line-height: 1.4; }
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Print View Framework Overrides */
+@media print {
+    .no-print { display: none !important; }
+    body, html { background: white; }
+    .resume-paper { border: none; padding: 0; }
+    .preview-sectionCard { border: none; padding: 0; box-shadow: none; }
+}
